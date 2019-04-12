@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Card from './Card';
+import CreateCard from './CreateNew';
 
 export default class List extends Component {
 	constructor() {
@@ -17,7 +18,7 @@ export default class List extends Component {
 		}).catch(err => console.log("get problem lol", err))
 	}
 	createCard = newProfile => {
-		axios.post('/api/profiles').then(res => {
+		axios.post('/api/profiles', newProfile).then(res => {
 			this.setState({
 				cards: res.data
 			})
@@ -29,6 +30,7 @@ export default class List extends Component {
 				{this.state.cards.map(card => {
 					return <Card key={card.id} card={card}/>
 				})}
+				<CreateCard createCard={this.createCard}/>
 			</div>
 		)
 	}

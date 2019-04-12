@@ -1,46 +1,42 @@
-module.exports = [
+let id = 1;
+let profileList = [
 	{
 		name: "Aidan",
 		pronouns: "he/him",
 		birthday: "24 May",
-		id: 1
+		id: id++
 	},
 	{
 		name: "James",
 		pronouns: "she/him",
 		birthday: "26 September",
-		id: 2
+		id: id++
 	},
 	{
 		name: "Ellie",
 		pronouns: "she/her",
 		birthday: "31 December",
-		id: 3
+		id: id++
 	},
 	{
 		name: "Murphy",
 		pronouns: "they/them",
 		birthday: "6 May",
-		id: 4
+		id: id++
 	},
 	{
 		name: "Alix",
 		pronouns: "they/them",
-		birthday: "2 Aug",
-		id: 5
+		birthday: "2 August",
+		id: id++
 	}
 ]
 
-/*
-Here’s a decent list of vscode extensions to add functionality to your code editor,
+module.exports = {profileList, id}
 
-vscode-icons,
+/*
+Here’s a decent list of vscode extensions to add functionality to your code editor:
 prettier,
-path intellisense,
-indent-rainbow,
 eslint,
-bracket pair colorizer,
-code spell checker,
-auto close tag,
-auto rename tag
+code spell checker
 */
